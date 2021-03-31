@@ -1,0 +1,15 @@
+{
+    "name": "eagle/user",
+    "autoload": {
+        "psr-4": {
+            "Eagle\\User\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "\\Eagle\\User\\Providers\\UserServiceProvider"
+            ]
+        }
+    }
+}

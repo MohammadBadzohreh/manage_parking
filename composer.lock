@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0b4e5c4a079a99be174594c9ba5eceb0",
+    "content-hash": "545273ca06046ad258730caea7454017",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -390,6 +390,31 @@
                 }
             ],
             "time": "2020-11-24T19:55:57+00:00"
+        },
+        {
+            "name": "eagle/user",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "modules/Eagle/User",
+                "reference": "ad367a64ebd46b009df23930b841a6ec67e3c6e0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "\\Eagle\\User\\Providers\\UserServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Eagle\\User\\": "src"
+                }
+            },
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "egulias/email-validator",
@@ -7426,7 +7451,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "eagle/user": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
