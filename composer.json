@@ -9,17 +9,53 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "eagle/car": "dev-master",
+        "eagle/common": "dev-master",
+        "eagle/dashboard": "dev-master",
+        "eagle/front": "dev-master",
+        "eagle/parking": "dev-master",
+        "eagle/payment": "dev-master",
+        "eagle/rolepermission": "dev-master",
         "eagle/user": "dev-master",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.12",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+        "spatie/laravel-permission": "^4.0"
     },
     "repositories": [
         {
             "type": "path",
             "url": "modules/Eagle/User"
+        },
+        {
+            "type": "path",
+            "url": "modules/Eagle/Dashboard"
+        },
+        {
+            "type": "path",
+            "url": "modules/Eagle/Parking"
+        },
+        {
+            "type": "path",
+            "url": "modules/Eagle/RolePermission"
+        },
+        {
+            "type": "path",
+            "url": "modules/Eagle/Car"
+        },
+        {
+            "type": "path",
+            "url": "modules/Eagle/Front"
+        },
+        {
+            "type": "path",
+            "url": "modules/Eagle/Payment"
+        },
+        {
+            "type": "path",
+            "url": "modules/Eagle/Common"
         }
     ],
     "require-dev": {

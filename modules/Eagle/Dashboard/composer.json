@@ -1,0 +1,15 @@
+{
+    "name": "eagle/dashboard",
+    "autoload": {
+        "psr-4": {
+            "Eagle\\Dashboard\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "\\Eagle\\Dashboard\\Providers\\DashboardServiceProvider"
+            ]
+        }
+    }
+}

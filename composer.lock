@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "545273ca06046ad258730caea7454017",
+    "content-hash": "8816e98063f9df2b8ff728249e163da9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -390,6 +390,184 @@
                 }
             ],
             "time": "2020-11-24T19:55:57+00:00"
+        },
+        {
+            "name": "eagle/car",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "modules/Eagle/Car",
+                "reference": "ebf0d59dfd811dcd467e81c35a144499c70512d7"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "\\Eagle\\Car\\Providers\\CarServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Eagle\\Car\\": "src"
+                }
+            },
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "eagle/common",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "modules/Eagle/Common",
+                "reference": "7988ffa229647cc2636ee9ff510700ee12a9e9ab"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "\\Eagle\\Common\\Providers\\CommonServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Eagle\\Common\\": "src"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "eagle/dashboard",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "modules/Eagle/Dashboard",
+                "reference": "2338bf15076f0486e67ee32b884affca37888823"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "\\Eagle\\Dashboard\\Providers\\DashboardServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Eagle\\Dashboard\\": "src"
+                }
+            },
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "eagle/front",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "modules/Eagle/Front",
+                "reference": "da45e135011c66ac6dbc33bb1e6485918964c658"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "\\Eagle\\Front\\Providers\\FrontServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Eagle\\Front\\": "src"
+                }
+            },
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "eagle/parking",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "modules/Eagle/Parking",
+                "reference": "2926c2f7ed900804fd7673c3cef6d2ea7fd9c307"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "\\Eagle\\Parking\\Providers\\ParkingServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Eagle\\Parking\\": "src"
+                }
+            },
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "eagle/payment",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "modules/Eagle/Payment",
+                "reference": "5ee9aecbedda59c7d264cfb14770a3affbe7a5a0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "\\Eagle\\Payment\\Providers\\PaymentServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Eagle\\Payment\\": "src"
+                }
+            },
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "eagle/rolepermission",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "modules/Eagle/RolePermission",
+                "reference": "fb51532e1f0995fbc4df1c5151bb5fd77ed45a29"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "\\Eagle\\RolePermission\\Providers\\RolePermissionServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Eagle\\RolePermission\\": "src"
+                }
+            },
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "eagle/user",
@@ -2377,6 +2555,84 @@
                 }
             ],
             "time": "2020-08-18T17:17:46+00:00"
+        },
+        {
+            "name": "spatie/laravel-permission",
+            "version": "4.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-permission.git",
+                "reference": "29c05324c170c0be108ccb86dd29f6a719c0a617"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/29c05324c170c0be108ccb86dd29f6a719c0a617",
+                "reference": "29c05324c170c0be108ccb86dd29f6a719c0a617",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/auth": "^6.0|^7.0|^8.0",
+                "illuminate/container": "^6.0|^7.0|^8.0",
+                "illuminate/contracts": "^6.0|^7.0|^8.0",
+                "illuminate/database": "^6.0|^7.0|^8.0",
+                "php": "^7.2.5|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^4.0|^5.0|^6.0",
+                "phpunit/phpunit": "^8.0|^9.0",
+                "predis/predis": "^1.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\Permission\\PermissionServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Permission\\": "src"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Permission handling for Laravel 6.0 and up",
+            "homepage": "https://github.com/spatie/laravel-permission",
+            "keywords": [
+                "acl",
+                "laravel",
+                "permission",
+                "permissions",
+                "rbac",
+                "roles",
+                "security",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-permission/issues",
+                "source": "https://github.com/spatie/laravel-permission/tree/4.0.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-03-22T18:38:29+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -7452,6 +7708,13 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "eagle/car": 20,
+        "eagle/common": 20,
+        "eagle/dashboard": 20,
+        "eagle/front": 20,
+        "eagle/parking": 20,
+        "eagle/payment": 20,
+        "eagle/rolepermission": 20,
         "eagle/user": 20
     },
     "prefer-stable": true,

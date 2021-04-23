@@ -1,0 +1,15 @@
+{
+    "name": "eagle/rolepermission",
+    "autoload": {
+        "psr-4": {
+            "Eagle\\RolePermission\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "\\Eagle\\RolePermission\\Providers\\RolePermissionServiceProvider"
+            ]
+        }
+    }
+}

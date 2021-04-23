@@ -1,0 +1,15 @@
+{
+    "name": "eagle/payment",
+    "autoload": {
+        "psr-4": {
+            "Eagle\\Payment\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "\\Eagle\\Payment\\Providers\\PaymentServiceProvider"
+            ]
+        }
+    }
+}

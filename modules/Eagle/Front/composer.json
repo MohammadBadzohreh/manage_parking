@@ -1,0 +1,15 @@
+{
+    "name": "eagle/front",
+    "autoload": {
+        "psr-4": {
+            "Eagle\\Front\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "\\Eagle\\Front\\Providers\\FrontServiceProvider"
+            ]
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "eagle/parking",
+    "autoload": {
+        "psr-4": {
+            "Eagle\\Parking\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "\\Eagle\\Parking\\Providers\\ParkingServiceProvider"
+            ]
+        }
+    }
+}

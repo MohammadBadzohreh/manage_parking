@@ -1,0 +1,18 @@
+{
+    "name": "eagle/common",
+    "autoload": {
+        "psr-4": {
+            "Eagle\\Common\\" : "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "\\Eagle\\Common\\Providers\\CommonServiceProvider"
+            ]
+        }
+    }
+}

@@ -110,6 +110,14 @@
       <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
       <path value="$PROJECT_DIR$/vendor/laravel/breeze" />
       <path value="$PROJECT_DIR$/vendor/eagle/user" />
+      <path value="$PROJECT_DIR$/vendor/eagle/dashboard" />
+      <path value="$PROJECT_DIR$/vendor/eagle/parking" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
+      <path value="$PROJECT_DIR$/vendor/eagle/rolepermission" />
+      <path value="$PROJECT_DIR$/vendor/eagle/car" />
+      <path value="$PROJECT_DIR$/vendor/eagle/front" />
+      <path value="$PROJECT_DIR$/vendor/eagle/payment" />
+      <path value="$PROJECT_DIR$/vendor/eagle/common" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />

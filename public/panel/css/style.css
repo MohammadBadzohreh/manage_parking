@@ -1277,6 +1277,7 @@ select {
 .file-upload {
     margin-bottom: 10px;
     cursor: pointer;
+    font-family: irs !important;
 }
 
 .i-file-upload {
@@ -1295,7 +1296,6 @@ select {
     font-style: normal;
     white-space: nowrap;
     color: #80868a;
-    font-family: iransans !important;
     display: inline-block;
     border-radius: 21px;
     padding: 4px 25px;
@@ -1872,4 +1872,24 @@ span.tagRemove:hover {
 }
 .notification__box .title__noti{
     padding: 15px 0;
+}
+
+
+/*custom*/
+.checkbox_span{
+    margin-right: 2.2em;
+}
+.invalid-feedback{
+    font-size: 14px;
+    color: red;
+}
+.iziToast-texts{
+    font-family: irs !important;
+}
+.item-li svg{
+    position: absolute;
+    font-size: 20px;
+    top: 14px;
+    color: #636e72;
+    right: 15px;
 }
