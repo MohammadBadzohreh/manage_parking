@@ -16,118 +16,7 @@
     <div class="container">
         <div class="t-header-row">
             <div class="t-header-right">
-                <div class="t-header-logo"><a href="index.html"></a></div>
-                <div class="t-header-search">
-                    <div class="t-header-searchbox">
-                        <input type="text" placeholder="جستجو پارکینگ / مقاله / مدرس">
-                        <div class="t-header-search-content">
-                            <div class="t-header-search-result-filters">
-                                <div class="t-header-search-filter-item f-all active"><span>همه (20)</span></div>
-                                <div class="t-header-search-filter-item f-courses "><span>پارکینگ ها (13)</span></div>
-                                <div class="t-header-search-filter-item f-article "><span>مقاله ها (5)</span></div>
-                                <div class="t-header-search-filter-item f-teacher "><span>مدرسین (2)</span></div>
-                            </div>
-                            <div class="t-header-search-result">
-                                <a href="">
-                                    <div class="t-header-search-result-right">
-                                        <p>پارکینگ ساخت فریم ورک مشابه لاراول</p>
-                                        <p class="t-header-search-result-right-info">
-                                            مدرس پارکینگ : محمد نیکو
-                                        </p>
-                                    </div>
-                                    <div class="t-header-search-result-left">
-                                        <img src="{{ asset('/front/img/banner/laravel-payment-processing.jpg') }}"
-                                             alt="">
-                                    </div>
-                                </a>
-                                <a href="">
-                                    <div class="t-header-search-result-right">
-                                        <p>laravel course</p>
-                                        <p class="t-header-search-result-right-info">
-                                            مدرس پارکینگ : محمد نیکو
-                                        </p>
-                                    </div>
-                                    <div class="t-header-search-result-left">
-                                        <img src="{{ asset('/front/img/banner/laravel-payment-processing.jpg') }}"
-                                             alt="">
-                                    </div>
-                                </a>
-                                <a href="">
-                                    <div class="t-header-search-result-right">
-                                        <p>پارکینگ ساخت فریم ورک مشابه لاراول</p>
-                                        <p class="t-header-search-result-right-info">
-                                            مدرس پارکینگ : محمد نیکو
-                                        </p>
-                                    </div>
-                                    <div class="t-header-search-result-left">
-                                        <img src="{{ asset('/front/img/banner/laravel-payment-processing.jpg') }}"
-                                             alt="">
-                                    </div>
-                                </a>
-                                <a href="">
-                                    <div class="t-header-search-result-right">
-                                        <p>پارکینگ ساخت فریم ورک مشابه لاراول</p>
-                                        <p class="t-header-search-result-right-info">
-                                            مدرس پارکینگ : محمد نیکو
-                                        </p>
-                                    </div>
-                                    <div class="t-header-search-result-left">
-                                        <img src="{{ asset('/front/img/banner/laravel-payment-processing.jpg') }}"
-                                             alt="">
-                                    </div>
-                                </a>
-                                <a href="">
-                                    <div class="t-header-search-result-right">
-                                        <p>پارکینگ ساخت فریم ورک مشابه لاراول</p>
-                                        <p class="t-header-search-result-right-info">
-                                            مدرس پارکینگ : محمد نیکو
-                                        </p>
-                                    </div>
-                                    <div class="t-header-search-result-left">
-                                        <img src="{{ asset('/front/img/banner/laravel-payment-processing.jpg') }}"
-                                             alt="">
-                                    </div>
-                                </a>
-                                <a href="">
-                                    <div class="t-header-search-result-right">
-                                        <p>پارکینگ ساخت فریم ورک مشابه لاراول</p>
-                                        <p class="t-header-search-result-right-info">
-                                            مدرس پارکینگ : محمد نیکو
-                                        </p>
-                                    </div>
-                                    <div class="t-header-search-result-left">
-                                        <img src="{{ asset('/front/img/banner/laravel-payment-processing.jpg') }}"
-                                             alt="">
-                                    </div>
-                                </a>
-                                <a href="">
-                                    <div class="t-header-search-result-right">
-                                        <p>پارکینگ ساخت فریم ورک مشابه لاراول</p>
-                                        <p class="t-header-search-result-right-info">
-                                            مدرس پارکینگ : محمد نیکو
-                                        </p>
-                                    </div>
-                                    <div class="t-header-search-result-left">
-                                        <img src="{{ asset('/front/img/banner/laravel-payment-processing.jpg') }}"
-                                             alt="">
-                                    </div>
-                                </a>
-                                <a href="">
-                                    <div class="t-header-search-result-right">
-                                        <p>پارکینگ ساخت فریم ورک مشابه لاراول</p>
-                                        <p class="t-header-search-result-right-info">
-                                            مدرس پارکینگ : محمد نیکو
-                                        </p>
-                                    </div>
-                                    <div class="t-header-search-result-left">
-                                        <img src="{{ asset('/front/img/banner/laravel-payment-processing.jpg') }}"
-                                             alt="">
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <img width="70" height="70" src="{{ asset('/front/img/logo.png') }}" alt="">
             </div>
             <div class="t-header-left">
                 <div class="icons">
@@ -175,8 +64,8 @@
         </div>
         <!---->
         <div class="login-register-btn d-none">
-            <div><a class="btn-login" href="login.html">ورود</a></div>
-            <div><a class="btn-register" href="register.html">ثبت نام</a></div>
+            <div><a class="btn-login" href="{{ route("login") }}">ورود</a></div>
+            <div><a class="btn-register" href="{{ route("register") }}">ثبت نام</a></div>
         </div>
         <div class="container">
             <div class="dark-light">
@@ -196,7 +85,7 @@
 </header>
 <main id="index">
     <article class="container article">
-        <div class="ads d-none">
+        <div class="ads">
             <a href="" rel="nofollow noopener"><img src="{{ asset('/front/img/ads/1440px/test.jpg') }}" alt=""></a>
         </div>
         <div class="top-info">
@@ -236,7 +125,6 @@
         <div class="box-filter">
             <div class="b-head">
                 <h2>جدید ترین پارکینگ ها</h2>
-                <a href="all-courses.html">مشاهده همه</a>
             </div>
             <div class="posts">
                 @foreach($parkings as $parking)
@@ -250,7 +138,7 @@
                             </div>
                             <div class="card-title"><h2{{ $parking->title }}</h2></div>
                             <div class="card-body">
-                                <img src="{{ asset('/front/img/profile.jpg') }}" alt="محمد نیکو">
+                                <img src="{{ asset('/front/img/profile.jpg') }}" alt="{{ auth()->user()->name ?? 'بنر کاربر' }}">
                                 <span>{{ $parking->user->name }}</span>
                             </div>
                             <div class="card-details">
@@ -299,8 +187,8 @@
     </div>
     <div class="webamooz">
         طراحی و توسعه با لاراول توسط تیم
-        <a href="https://webamooz.net">وب آموز</a>
-        © 1399
+        <a href="">عقاب</a>
+        © 1400
     </div>
 </footer>
 <div class="overlay"></div>

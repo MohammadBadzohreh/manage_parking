@@ -23,11 +23,19 @@
             title: {
                 text: 'نمودار رزرو پارکینگ'
             },
-            subtitle: {
-                text: 'Source: WorldClimate.com'
+            lang: {
+                viewFullscreen: "نمایش تمام صفحه",
+                printChart: "پرینت",
+                downloadCSV: "دانلود csv",
+                downloadJPEG: "دانلود تصویر (jpeg)",
+                downloadPDF: "دانلود پی دی اف",
+                downloadPNG: "دانلود تصویر (png)",
+                downloadSVG: "دانلود تصویر (svg)",
+                downloadXLS: "دانلود فایل excel",
+                viewData: "نمایش به صورت جدول",
             },
             xAxis: {
-                categories: [@foreach($dates as $date => $value) '{{ $date }}', @endforeach],
+                categories: [@foreach($dates as $date => $value) '{{ \Morilog\Jalali\Jalalian::fromCarbon(\Illuminate\Support\Carbon::parse($date))->format("Y/m/d") }}', @endforeach],
             },
             yAxis: {
                 title: {
@@ -67,6 +75,4 @@
             }]
         });
     </script>
-
-
 @endsection

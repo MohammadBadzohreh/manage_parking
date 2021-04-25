@@ -18,6 +18,7 @@ class AddCarToParking
 
     public function handle($event)
     {
+
         if ($event->payment->paymentable_type = Parking::class) {
             resolve(ParkingRepo::class)
                 ->addCarToParking($event->payment->paymentable, $event->payment->buyer_id);

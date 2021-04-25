@@ -17,6 +17,7 @@ class Car extends Model
         "tag",
         "color",
         "model",
+        "parking_id"
     ];
 
     const PRIDE_TYPE = "pride";

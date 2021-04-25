@@ -28,7 +28,7 @@ class ParkingRepo
 
     public function paginate()
     {
-        return Parking::query()->paginate();
+        return Parking::all();
     }
 
     public function update($data, $id)
@@ -67,4 +67,6 @@ class ParkingRepo
         $car->parking_id = $parking->id;
         $car->save();
     }
+
+
 }

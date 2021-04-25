@@ -1,5 +1,9 @@
 {
     "manage own parking": "مدیریت پارکینگ خود",
     "manage parking": "مدیریت کل پارکینگ ها",
-    "super admin": "مدیر کل"
+    "super admin": "مدیر کل",
+    "manage role permission": "مدیریت نقش کاربری",
+    "manage cars": "مدیر خودرو",
+    "manage transactions": "مدیریت ترکنش ها",
+    "manage users": "مدیریت کاربران"
 }

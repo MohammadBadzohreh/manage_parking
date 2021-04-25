@@ -9,10 +9,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use phpDocumentor\Reflection\Types\True_;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
-    use HasFactory, Notifiable;
+    use HasFactory,HasRoles, Notifiable;
 
     protected $fillable = [
         'name',
@@ -45,4 +46,10 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasMany(Car::class, "user_id", "id");
     }
+
+    public function car()
+    {
+        return $this->hasOne(Car::class,"user_id","id");
+    }
+
 }

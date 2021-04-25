@@ -125,6 +125,8 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/eagle/front" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/eagle/payment" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/eagle/common" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/beberlei/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/morilog/jalali" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -63,7 +63,7 @@ class Parking extends Model
 
     public function cars()
     {
-        return $this->hasMany(Car::class,"car_id","id");
+        return $this->hasMany(Car::class,"parking_id","id");
     }
 
 //endregion relations
@@ -71,6 +71,15 @@ class Parking extends Model
     public function path()
     {
         return route("parking.detail", $this->id);
+    }
+
+    public function st()
+    {
+        $rezervCount = $this->cars->count();
+        if ($this->capacity <= $rezervCount){
+            return self::FULL_STATUS;
+        }
+        return  self::NOT_FILLED_STATUS;
     }
 
 }

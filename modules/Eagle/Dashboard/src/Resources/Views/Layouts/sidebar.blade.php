@@ -14,24 +14,69 @@
     @endauth
 
     <ul style="margin-top: 6.5em">
-        <li class="item-li @if(request()->routeIs("user.*")) is-active @endif">
-            <a href="{{ route("user.index") }}"><i class="fas fa-users"></i><span>کاربران</span></a>
-        </li>
-        <li class="item-li @if(request()->routeIs("parking.*")) is-active @endif">
-            <a href="{{ route('parking.index') }}"><i class="fas fa-parking"></i><span>پارکینگ</span></a>
-        </li>
-        <li class="item-li @if(request()->routeIs("permissions.*")) is-active @endif">
-            <a href="{{ route("permissions.index") }}"><i class="fas fa-user-shield"></i><span>نقش کاربری</span></a>
-        </li>
-        <li class="item-li @if(request()->routeIs("car.*")) is-active @endif">
-            <a href="/car"><i class="fas fa-car"></i><span>خودرو</span></a>
-        </li>
 
-        <li class="item-li @if(request()->routeIs("transactions.*")) is-active @endif">
-            <a href="{{ route("transactions.index") }}"><i class="fas fa-money-check-alt"></i><span>تراکنش ها</span></a>
-        </li>
+        @can(\Eagle\RolePermission\Models\Permission::SUPER_ADMIN)
+            <li class="item-li @if(request()->routeIs("dashboard")) is-active @endif">
+                <a href="{{ route("dashboard") }}">
+                    <i class="fas fa-tachometer-alt"></i><span>داشبورد</span></a>
+            </li>
+            <li class="item-li @if(request()->routeIs("user.*")) is-active @endif">
+                <a href="{{ route("user.index") }}">
+                    <i class="fas fa-users"></i><span>کاربران</span></a>
+            </li>
+            <li class="item-li @if(request()->routeIs("parking.*")) is-active @endif">
+                <a href="{{ route('parking.index') }}">
+                    <i class="fas fa-parking"></i><span>پارکینگ</span></a>
+            </li>
+            <li class="item-li @if(request()->routeIs("permissions.*")) is-active @endif">
+                <a href="{{ route("permissions.index") }}">
+                    <i class="fas fa-user-shield"></i><span>نقش کاربری</span></a>
+            </li>
+            <li class="item-li @if(request()->routeIs("car.*")) is-active @endif">
+                <a href="/car">
+                    <i class="fas fa-car"></i><span>خودرو</span></a>
+            </li>
 
+            <li class="item-li @if(request()->routeIs("transactions.*")) is-active @endif">
+                <a href="{{ route("transactions.index") }}">
+                    <i class="fas fa-money-check-alt"></i><span>تراکنش ها</span></a>
+            </li>
+            {{--=================--}}
+        @else
 
+            <li class="item-li @if(request()->routeIs("dashboard")) is-active @endif">
+                <a href="{{ route("dashboard") }}">
+                    <i class="fas fa-tachometer-alt"></i><span>داشبورد</span></a>
+            </li>
+            @can(\Eagle\RolePermission\Models\Permission::MANAGE_USERS)
+                <li class="item-li @if(request()->routeIs("user.*")) is-active @endif">
+                    <a href="{{ route("user.index") }}">
+                        <i class="fas fa-users"></i><span>کاربران</span></a>
+                </li>
+            @endcan
+            @can(\Eagle\RolePermission\Models\Permission::MANAGE_PARKING)
+                <li class="item-li @if(request()->routeIs("parking.*")) is-active @endif">
+                    <a href="{{ route('parking.index') }}">
+                        <i class="fas fa-parking"></i><span>پارکینگ</span></a>
+                </li>
+            @endcan
+            @can(\Eagle\RolePermission\Models\Permission::MANAGE_ROLE_PERMISSION)
+                <li class="item-li @if(request()->routeIs("permissions.*")) is-active @endif">
+                    <a href="{{ route("permissions.index") }}">
+                        <i class="fas fa-user-shield"></i><span>نقش کاربری</span></a>
+                </li>
+            @endcan
+            <li class="item-li @if(request()->routeIs("car.*")) is-active @endif">
+                <a href="/car">
+                    <i class="fas fa-car"></i><span>خودرو</span></a>
+            </li>
+            @can(\Eagle\RolePermission\Models\Permission::MANAGE_TRANSACTIONS)
+
+                <li class="item-li @if(request()->routeIs("transactions.*")) is-active @endif">
+                    <a href="{{ route("transactions.index") }}">
+                        <i class="fas fa-money-check-alt"></i><span>تراکنش ها</span></a>
+                </li>
+            @endcan
+        @endcan
     </ul>
-
 </div>

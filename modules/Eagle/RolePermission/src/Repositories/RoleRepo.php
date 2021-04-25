@@ -32,6 +32,6 @@ class RoleRepo
 
     public function delete($id)
     {
-        Role::where("id", $id)->delete();
+        return Role::where("id", $id)->delete();
     }
 }

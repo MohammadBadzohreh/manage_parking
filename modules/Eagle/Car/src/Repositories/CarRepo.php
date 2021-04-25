@@ -25,9 +25,9 @@ class CarRepo
             ]);
     }
 
-    public function paginate()
+    public function all()
     {
-        return Car::query()->paginate();
+        return Car::all();
     }
 
     public function delete($car_id)
@@ -45,6 +45,11 @@ class CarRepo
             "color" => $data["color"],
             "model" => $data["model"]
         ]);
+    }
+
+    public function findByUserId($user_id)
+    {
+        return Car::query()->where("user_id",$user_id)->get();
     }
 
 

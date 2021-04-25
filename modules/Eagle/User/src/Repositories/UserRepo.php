@@ -5,9 +5,13 @@ use Eagle\User\Models\User;
 
 class UserRepo
 {
+
+    public function findById($id)
+    {
+        return User::query()->find($id);
+    }
     public function paginate()
     {
-//        todo chage line for paginateion
         return User::all();
     }
 

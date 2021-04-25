@@ -33,15 +33,16 @@ class PaymentController extends Controller
 
     }
 
-    public function transactions (PaymentRepo $paymentRepo)
+    public function transactions(PaymentRepo $paymentRepo)
     {
+        $this->authorize("manage", Payment::class);
         $dates = collect();
         foreach (range(-30, 0) as $i) {
             $dates->put(now()->addDays($i)->format("Y-m-d"), 0);
         }
         $summry = $paymentRepo->getsummary($dates);
 
-        return view("Payment::transactions",compact("dates","summry"));
+        return view("Payment::transactions", compact("dates", "summry"));
     }
 
 }

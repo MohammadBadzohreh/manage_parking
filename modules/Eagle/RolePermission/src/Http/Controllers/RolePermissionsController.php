@@ -9,6 +9,7 @@ use Eagle\RolePermission\http\Requests\UpdateRolerequest;
 use Eagle\RolePermission\Models\Role;
 use Eagle\RolePermission\Repositories\PermissionsRepo;
 use Eagle\RolePermission\Repositories\RoleRepo;
+use Illuminate\Http\Response;
 
 class RolePermissionsController extends Controller
 {
@@ -59,9 +60,10 @@ class RolePermissionsController extends Controller
     public function destroy($roleId)
     {
         $this->authorize("delete", Role::class);
-        $this->RoleRepo->delete($roleId);
-        newFeedback("عملیات موفقیت آمیز", "حذف با موفقیت انجام شد!", "red");
-        return redirect()->route("permissions.index");
+        if ($this->RoleRepo->delete($roleId)) {
+            return response()->json(["message" => "عملیات با موفقیت انجام شد!"], Response::HTTP_OK);
+        }
+        return response()->json(["message" => "خطا درعملیات !"], Response::HTTP_INTERNAL_SERVER_ERROR);
     }
 
 }

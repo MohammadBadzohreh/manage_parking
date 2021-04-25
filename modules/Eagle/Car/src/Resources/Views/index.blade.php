@@ -23,28 +23,30 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($cars as $car)
-                    <tr role="row" class="">
-                        <td>{{ $car->id }}</td>
-                        <td>{{ $car->user->name }}</td>
-                        <td>@lang($car->car_type)</td>
-                        <td>{{ $car->tag }}</td>
-                        <td>@lang($car->color)</td>
-                        <td>@lang($car->model)</td>
-                        <td>
-                            <a href="{{ route("car.delete",$car->id) }}"
-                               onclick="hanleDeleteItem(event,'{{ $car->id }}')" class="item-delete mlg-15"
-                               title="حذف"></a>
-                            <a href="" target="_blank" class="item-eye mlg-15" title="مشاهده"></a>
-                            <a href="{{ route("car.edit",$car->id) }}" class="item-edit " title="ویرایش"></a>
-                        </td>
-                    </tr>
-                    <form id="delete_car_{{ $car->id }}" action="{{ route("car.delete",$car->id) }}"
-                          method="post">
-                        @csrf
-                        @method("delete")
-                    </form>
-                @endforeach
+                @if(!is_null($cars))
+                    @foreach($cars as $car)
+                        <tr role="row" class="">
+                            <td>{{ $car->id }}</td>
+                            <td>{{ $car->user->name }}</td>
+                            <td>@lang($car->car_type)</td>
+                            <td>{{ $car->tag }}</td>
+                            <td>@lang($car->color)</td>
+                            <td>@lang($car->model)</td>
+                            <td>
+                                <a href="{{ route("car.delete",$car->id) }}"
+                                   onclick="hanleDeleteItem(event,'{{ $car->id }}')" class="item-delete mlg-15"
+                                   title="حذف"></a>
+                                <a href="" target="_blank" class="item-eye mlg-15" title="مشاهده"></a>
+                                <a href="{{ route("car.edit",$car->id) }}" class="item-edit " title="ویرایش"></a>
+                            </td>
+                        </tr>
+                        <form id="delete_car_{{ $car->id }}" action="{{ route("car.delete",$car->id) }}"
+                              method="post">
+                            @csrf
+                            @method("delete")
+                        </form>
+                    @endforeach
+                @endif
                 </tbody>
             </table>
         </div>
